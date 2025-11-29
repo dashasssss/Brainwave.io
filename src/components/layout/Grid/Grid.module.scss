@@ -1,0 +1,23 @@
+@use "../../styles/mixins" as *;
+
+.grid {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  gap: 16px;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding-inline: 16px;
+
+  @include tablet{
+    grid-template-columns: repeat(12, 1fr);
+    padding-inline: 24px;
+  }
+
+  @include desktop  {
+    grid-template-columns: repeat(24, 1fr);
+    max-width: 1200px;
+    padding-inline: 24px;
+  }
+}
